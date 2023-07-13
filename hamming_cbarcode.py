@@ -990,8 +990,8 @@ def main():
 
     _, color_barcode = encoding_from_in_str(in_string, 'B')
 
-    dets_json_path = "D:/Train/models/yolact-master/results/bbox_detections.json"
-    image_path = "D:/Train/models/yolact-master/data/val"
+    dets_json_path = "D:/Train/models/yolact-master/results/bbox_detections.json"    # output file of boundingbox from detectiong model
+    image_path = "D:/Train/models/yolact-master/data/val"    // target image path
     c2mats = classes2color_mat(dets_json_path, image_path, json_utils=JsonUtils(), score_threshold=0.15)
     _, out_string = decoding_from_color_matrix(c2mats[10], is_stop_exist=False)
 
